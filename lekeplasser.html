@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Toaletter</title>
+	<link rel="stylesheet" type="text/css" href="css/toalettKart.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<!--grid-conainer definerer gridens utfoming og fungerer som sidens skjelett-->
+	<div class="grid-container">
+		<div class="box1">
+			<div>
+				<h1 id ='sideOverskrift'>Lekeplasser</h1>
+			</div>
+
+		</div>
+
+		<div>
+			<!--Toolbar for navigasjon, skal legge til arrangementside senere-->
+			<ul class="toolbar">
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="utesteder.html">Utesteder</a></li>
+        <li><a href="toaletter.html">Toalett</a></li>
+			</ul>
+		</div>
+
+
+		<!--Kart over aktuelle utesteder i Bergen, her skal det legge til mer js. Skal poppe opp navn og info på de markerte utestedene-->
+		<div class="box3">
+
+			<h2>Kart over Bergens toaletter</h2>
+
+			<div id="map">
+			</div>
+
+		</div>
+
+		<div class="box4">
+			<div class="table">
+				<section id="dataTable">
+				</section>
+			</div>
+			<div class = "formConainer">
+				<h3>Kriterier</h3>
+			<form action='#' id="advanceSearch">
+				<i class="fas fa-male"></i>
+				<input type="checkbox" name="søk" onclick="formInput()" value="herre"  >
+				<i class="fas fa-female"></i>
+				<input type="checkbox" name="søk" onclick="formInput()" value="dame"  >
+				🚼
+				<input type="checkbox" name="søk" onclick="formInput()" value="stellerom" >
+				<i class="fab fa-accessible-icon"></i>
+				<input type="checkbox" name="søk" onclick="formInput()" value="rullestol" >
+			</form>
+			<div class="searchbar">
+					<input type="text" id="bar" method= "put" value="" placeholder="Search.." onkeyup="fastSearch()">
+</div>
+
+			</div>
+
+	</div>
+
+		<!--Footer-->
+		<div class="box5">
+			<p>
+				<b>BarePilsAS</b> Have a nice day ;)</p>
+		</div>
+	</div>
+  <p style = "display: none" id ='data'>https://hotell.difi.no/api/json/bergen/lekeplasser</p>
+	<script src="js/scriptToalettListe.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_qeaakz2UGmaHzwx4HcAXkMOHUL_wDng&callback=fyllKart"></script>
+
+
+</body>
+
+</html>

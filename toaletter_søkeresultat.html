@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Toaletter</title>
+	<link rel="stylesheet" type="text/css" href="css/toalettKart.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<!--grid-conainer definerer gridens utfoming og fungerer som sidens skjelett-->
+	<div class="grid-container">
+		<div class="box1">
+			<div>
+				<h1 id ='sideOverskrift'>Toalett</h1>
+			</div>
+
+		</div>
+
+		<div>
+			<!--Toolbar for navigasjon, skal legge til arrangementside senere-->
+			<ul class="toolbar">
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="utesteder.html">Utesteder</a></li>
+				<li><a href="lekeplasser.html">Lekeplasser</a></li>
+			</ul>
+		</div>
+
+
+		<!--Kart over aktuelle utesteder i Bergen, her skal det legge til mer js. Skal poppe opp navn og info på de markerte utestedene-->
+		<div class="box3">
+
+			<h2>Kart over Bergens toaletter</h2>
+
+			<div id="map">
+			</div>
+
+		</div>
+
+		<div class="box4">
+			<div class="table">
+				<section id="dataTable">
+				</section>
+			</div>
+			<div class = "formConainer">
+				<h3>Kriterier</h3>
+        <form action='toaletter_søkeresultat.html' id="advanceSearch">
+  				<i class="fas fa-male"></i>
+  				<input type="checkbox" name="herre" value="true"  >
+  				<i class="fas fa-female"></i>
+  				<input type="checkbox" name="dame"  value="true"  > 🚼<!--symboliserer stellerom-->
+  				<input type="checkbox" name="stellerom"  value="true" >
+  				<i class="fab fa-accessible-icon"></i>	<!--symboliserer rullestoltillgang-->
+  				<input type="checkbox" name="rullestol"  value="true" >
+  				<i style = "font-size : 20" class="fas fa-lock-open"></i> <!--symboliserer Åpen nå-->
+  				<input type = "checkbox" name = "åpenNå" value="true"> <br>
+					Max pris
+					<input type="number" name="pris" value="0">
+  				<i id ="gratisTag">Gratis</i>
+  				<input type = "checkbox" name = "gratis" value = true>  <br>
+						<input class = "dayInput" type="radio" name="dag" value="tid_hverdag"> Hverdag
+						<input class = "dayInput"type="radio" name="dag" value="tid_lordag"> Lørdag
+						<input class = "dayInput" type="radio" name="dag" value="tid_sondag"> Søndag	<br>
+  				<input id ="setTime" type="time" name = "klokkeslett"  placeholder="00:00" >
+  				<input type="submit">
+  			</form>
+
+
+
+			</div>
+
+	</div>
+
+		<!--Footer-->
+		<div class="box5">
+			<p>
+				<b>BarePilsAS</b> Have a nice day ;)</p>
+		</div>
+	</div>
+ 	<p style = "display: none" id ='data'>https://hotell.difi.no/api/json/bergen/dokart</p>
+	<script src="js/scriptToalettListe.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_qeaakz2UGmaHzwx4HcAXkMOHUL_wDng&callback=fyllKart"></script>
+	<script type="text/javascript" src = "js/time.js"></script>
+  <script type="text/javascript" src = "js\url_input.js"></script>
+	<script type="text/javascript" src = "js/advanceSearch.js">
+
+	</script>
+
+</body>
+
+</html>

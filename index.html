@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bare Pils</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+  <!--grid-conainer definerer gridens utfoming og fungerer som sidens skjelett-->
+  <div class="grid-container">
+
+    <div class="box1">
+      <div>
+        <h1>Bare Pils</h1>
+      </div>
+    </div>
+    <div></div>
+    <!--Toolbar for navigasjon, skal legge til arrangementside senere-->
+    <ul class="toolbar">
+      <li><a href="utesteder.html">Utesteder</a></li>
+      <li><a href="toaletter.html">Toalett</a></li>
+      <li><a href="lekeplasser.html">Lekeplasser</a></li>
+    </ul>
+
+    <!--Automatisk slideshow, viser oversikt over relevante arrangement. Se skript.js for oppførsel.-->
+
+    <div class="main">
+      <div class="box2">
+        <div id="slideshow-container">
+          <img class="slide" src="img/Mikromandag.jpg" alt="MikromandagKvarteret">
+          <img class="slide" src="img/HallaRicks.png" alt="HallaRicks">
+          <img class="slide" src="img/PremiumTirsdagKaos.jpg" alt="PremiumTirsdagKaos">
+          <img class="slide" src="img/QuizHector.png" alt="HectorsQuiz">
+          <img class="slide" src="img/SkiNights.jpg" alt="HectorsQuiz">
+          <button class="button" id="next" type="button" name="next" onclick="changeIndex(+1)"> &#128684; </button>
+          <button class="button" id="prev" type="button" name="next" onclick="changeIndex(-1)"> &#128684; </button>
+          <!--Test på en boks som skal vise info om de ulike arrangementene, skal opptateres i takt med bildene, og linke til arrangørens sider-->
+          <div class="arr-info" id="arr-info">
+            <h3>Mikromandag på kvarteret</h3>
+            <p>02.02 kl.17:00</p>
+            <p>Fast mandagskonsept med mikrobryggeri i forkus! </p>
+            <p>
+              <a id="arr-reff" href="https://www.facebook.com/events/146213319419830/">Til arrangement</a>
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+      <div class="box3">
+        <table class="prisliste">
+          <tr>
+            <th>Bar</th>
+            <th>Pris</th>
+          </tr>
+          <tr>
+            <td>Hectors Hybel</td>
+            <td>53 kr</td>
+          </tr>
+          <tr>
+            <td>Kvarteret</td>
+            <td>47kr</td>
+          </tr>
+          <tr>
+            <td>Kaos</td>
+            <td>49kr</td>
+          </tr>
+          <tr>
+            <td>Ricks</td>
+            <td>89kr</td>
+          </tr>
+          <tr>
+            <td>Heidis</td>
+            <td>99kr</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--PrisListen skal vise hvem som har dagens billigste pils, pga skiftende priser i ukedagene skal den opptateres daglig med js.-->
+
+    <!--foreløbig sidefull, info kan flyttes til egen side, plass kan f.eks fylles med "nyhetssaker" om utelivet i Bergen-->
+
+    <div class="box4">
+      <h4>Velkommen til bare pils!</h4>
+      <p>Vi er en Bergens basert nettside publiserer om utelivet i Bergern</p>
+      <p>Vi ønsker å tilby studenter, og andre unge i Bergen en oversikt over</p>
+      <p>utelivet i Bergen.</p>
+      <p>Hos oss finner du infomasjon om ølpris, åpningstider, aldersgrenser,</p>
+      <p>inngangspriser samt en oversikt over hva enkelt bar har å tilby.</p>
+      <p>En av de viktigste funskjsonene vi vil tilby er en dagelig oversikt over</p>
+      <p>arrengementene </p>
+    </div>
+
+    <!--Footer-->
+    <div class="box5">
+      <p><b>BarePilsAS</b> Have a nice day ;)</p>
+    </div>
+  </div>
+  <script src="js/skript.js"></script>
+
+</body>
+
+</html>
